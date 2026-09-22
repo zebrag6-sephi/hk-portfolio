@@ -2,6 +2,7 @@
 
 `dist` 폴더 전체가 완성된 웹사이트입니다. `article.html`을 브라우저로 열면 됩니다. `index.html`은 같은 기사 첫 화면입니다.
 
+- `introduce.html`: Z-studio 자기소개와 작업 방식
 - `article.html`: 대표 기사, 최근 기사 목록, 본문 팝업
 - `image.html`: 액자형 이미지 갤러리, 확대 보기
 - `video.html`: 대표 콘셉트 이미지와 3개 장면의 스토리보드

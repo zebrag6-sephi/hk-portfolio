@@ -1,0 +1,267 @@
+.studio-hero {
+  display: grid;
+  grid-template-columns: minmax(260px, .82fr) 1.35fr;
+  min-height: 610px;
+  border-block: 1px solid var(--line);
+}
+
+.studio-monogram {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--paper);
+  background: var(--blue);
+}
+
+.studio-monogram::after {
+  content: '';
+  position: absolute;
+  inset: 7%;
+  border: 1px solid rgba(247, 245, 238, .45);
+}
+
+.studio-monogram span {
+  font-family: var(--serif) !important;
+  font-size: clamp(220px, 27vw, 420px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: .7;
+  transform: translate(-3%, -2%);
+}
+
+.studio-monogram small {
+  position: absolute;
+  right: 11%;
+  bottom: 10%;
+  z-index: 1;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.studio-manifesto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(45px, 7vw, 100px);
+  background: #efeee4;
+}
+
+.studio-manifesto h2 {
+  margin: 24px 0 30px;
+  font-size: clamp(30px, 3.4vw, 50px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -1.5px;
+}
+
+.studio-manifesto h2 em {
+  color: var(--blue);
+  font-style: normal;
+}
+
+.studio-manifesto p {
+  max-width: 620px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 2;
+}
+
+.studio-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.studio-links a {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.studio-links a:hover,
+.text-link:hover {
+  color: var(--blue);
+}
+
+.studio-focus {
+  padding: 72px 0 85px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  padding-top: 34px;
+}
+
+.focus-grid article {
+  min-height: 225px;
+  padding: 28px;
+  border: 1px solid var(--line);
+}
+
+.focus-grid article:nth-child(2) {
+  color: var(--paper);
+  background: var(--olive);
+}
+
+.focus-grid span {
+  color: var(--blue);
+  font-family: var(--serif) !important;
+  font-size: 38px;
+  font-style: italic;
+}
+
+.focus-grid article:nth-child(2) span,
+.focus-grid article:nth-child(2) p {
+  color: #d9dacb;
+}
+
+.focus-grid h3 {
+  margin: 22px 0 12px;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.focus-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.studio-now {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 85px;
+  color: var(--paper);
+  background: var(--olive);
+}
+
+.studio-image {
+  position: relative;
+  min-height: 570px;
+  padding: 45px;
+  background: var(--paper);
+}
+
+.studio-image img {
+  object-position: center;
+}
+
+.studio-image span {
+  position: absolute;
+  right: 62px;
+  bottom: 58px;
+  padding: 5px 10px;
+  color: var(--paper);
+  background: rgba(52, 58, 43, .8);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.studio-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px, 6vw, 86px);
+}
+
+.studio-note h2 {
+  margin: 26px 0;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.studio-note p {
+  color: #d6d8cc;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.studio-note blockquote {
+  margin: 28px 0;
+  padding: 22px 0;
+  border-block: 1px solid #7b7f6d;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.text-link {
+  align-self: flex-start;
+  border-bottom: 1px solid currentColor;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .studio-hero,
+  .studio-now {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-monogram {
+    min-height: 390px;
+  }
+
+  .studio-image {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 0;
+  }
+
+  .studio-monogram {
+    min-height: 310px;
+  }
+
+  .studio-manifesto {
+    padding: 38px 7%;
+  }
+
+  .studio-manifesto h2 {
+    font-size: 29px;
+  }
+
+  .studio-links,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .studio-focus {
+    padding: 50px 0;
+  }
+
+  .focus-grid article {
+    min-height: 0;
+  }
+
+  .studio-now {
+    margin-bottom: 55px;
+  }
+
+  .studio-image {
+    min-height: 390px;
+    padding: 22px;
+  }
+
+  .studio-image span {
+    right: 34px;
+    bottom: 34px;
+  }
+
+  .studio-note {
+    padding: 40px 8%;
+  }
+}
