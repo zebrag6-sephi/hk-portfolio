@@ -435,3 +435,12 @@
     width: 190px;
   }
 }
+
+/* Site-only custom cursor for mouse and trackpad users. */
+@media (pointer: fine) {
+  html,
+  body,
+  body * {
+    cursor: url("assets/feather-cursor.png") 1 1, auto !important;
+  }
+}
