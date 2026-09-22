@@ -11,6 +11,8 @@
 - `script.js`: 기사 본문과 이미지 확대 기능
 - `assets`: AI 생성 예시 이미지 3개
 
+배경음악은 Luigi Boccherini의 *La Musica Notturna delle Strade di Madrid* 중 `Passacalle`입니다. 연주는 cello1753이며 [Internet Archive](https://archive.org/details/Boccherini-Passacalle)의 CC BY-ND 3.0 음원을 원본 그대로 사용했습니다.
+
 모든 기사와 프로젝트 설명은 임시 예시입니다. 영상 파일은 포함되어 있지 않습니다. 실제 영상을 추가할 때 video.html의 screen 영역을 `<video controls playsinline poster="assets/architecture.png"><source src="assets/my-video.mp4" type="video/mp4"></video>`로 교체할 수 있습니다.
 
 현재는 정적 포트폴리오로, 서버에 자료를 업로드하는 관리자 기능은 포함되지 않습니다. 내용을 수정한 HTML과 자료 파일을 함께 배포하는 방식입니다. 네 HTML을 직접 편집할 수 있습니다. build-pages.cjs를 다시 실행하면 HTML 직접 편집 내용은 덮어써지므로 둘 중 한 방식으로 관리하세요. article.html을 수정한 경우 index.html에도 동일한 내용을 반영하세요.

@@ -11,3 +11,31 @@ viewer.addEventListener('close',()=>document.body.style.overflow='');
 viewer.addEventListener('click',e=>{if(e.target===viewer){const r=viewer.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)viewer.close()}});
 document.querySelectorAll('[data-article]').forEach(button=>button.addEventListener('click',()=>{const [title,...paras]=articles[Number(button.dataset.article)];content.replaceChildren();const section=document.createElement('article');section.className='dialog-body';const h=document.createElement('h2');h.className='dialog-title';h.id='dialog-title';h.textContent=title;section.append(h);const label=document.createElement('small');label.textContent=Number(button.dataset.article)===0?'한국경제 AI 교육 · AI와 일상':'한국경제 AI 교육 · 포트폴리오용 예시 기사';section.append(label);paras.forEach(text=>{const p=document.createElement('p');p.textContent=text;section.append(p)});content.append(section);viewer.setAttribute('aria-labelledby','dialog-title');openDialog()}));
 document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{content.replaceChildren();const img=document.createElement('img');img.src=button.dataset.image;img.alt=button.dataset.title;img.className='dialog-image';const h=document.createElement('h2');h.id='dialog-title';h.className='dialog-title';h.textContent=button.dataset.title;content.append(img,h);viewer.setAttribute('aria-labelledby','dialog-title');openDialog()}));
+
+const siteMusic=document.querySelector('#site-music');
+const musicToggle=document.querySelector('#music-toggle');
+if(siteMusic&&musicToggle){
+  const musicIcon=musicToggle.querySelector('.music-icon');
+  const musicState=musicToggle.querySelector('.music-state');
+  const updateMusicUI=playing=>{
+    musicToggle.setAttribute('aria-pressed',String(playing));
+    musicIcon.textContent=playing?'Ⅱ':'♪';
+    musicState.textContent=playing?'음악 끄기':'음악 켜기';
+  };
+  const restoreMusicTime=()=>{
+    const saved=Number(sessionStorage.getItem('atelier-music-time'));
+    if(Number.isFinite(saved)&&saved>0&&saved<siteMusic.duration)siteMusic.currentTime=saved;
+  };
+  const playMusic=async()=>{
+    try{await siteMusic.play();updateMusicUI(true)}catch{updateMusicUI(false)}
+  };
+  siteMusic.volume=.22;
+  siteMusic.addEventListener('loadedmetadata',restoreMusicTime,{once:true});
+  if(localStorage.getItem('atelier-music')!=='off')playMusic();
+  else updateMusicUI(false);
+  musicToggle.addEventListener('click',async()=>{
+    if(siteMusic.paused){localStorage.setItem('atelier-music','on');await playMusic()}
+    else{siteMusic.pause();localStorage.setItem('atelier-music','off');updateMusicUI(false)}
+  });
+  window.addEventListener('pagehide',()=>sessionStorage.setItem('atelier-music-time',String(siteMusic.currentTime)));
+}
