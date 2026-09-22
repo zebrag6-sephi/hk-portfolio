@@ -1,6 +1,6 @@
 const fs = require('fs');
 const nav=[['introduce','Z-studio'],['article','기사'],['image','이미지'],['video','영상'],['final','Final project']];
-const header=p=>`<a class="skip" href="#main">본문으로 건너뛰기</a><header><a class="brand" href="article.html">AI <i>Atelier</i><small>HANKYUNG · LEARNING ARCHIVE</small></a><nav aria-label="주 메뉴">${nav.map(([id,label])=>`<a href="${id}.html" ${p===id?'aria-current="page"':''}>${label}</a>`).join('')}</nav><span class="edition">PORTFOLIO — 2026</span></header>`;
+const header=p=>`<a class="skip" href="#main">본문으로 건너뛰기</a><header><a class="brand" href="article.html"><strong>AI</strong> <i>Atelier</i><small>HANKYUNG · LEARNING ARCHIVE</small></a><nav aria-label="주 메뉴">${nav.map(([id,label])=>`<a href="${id}.html" ${p===id?'aria-current="page"':''}>${label}</a>`).join('')}</nav><span class="edition">PORTFOLIO — 2026</span></header>`;
 const footer=`<footer><a class="brand" href="article.html">AI <i>Atelier</i></a><p>배우고, 실험하고, 나만의 시선으로 기록합니다.<br><small>한국경제 AI 교육 · 개인 학습 포트폴리오 / 예시 콘텐츠</small></p><a href="#top">맨 위로 ↑</a></footer>`;
 const intro=(num,en,ko,desc)=>`<section class="page-intro"><div class="eyebrow">THE COLLECTION / ${num}</div><h1>${en}</h1><div class="intro-bottom"><h2>${ko}</h2><p>${desc}</p></div></section>`;
 const pages={
