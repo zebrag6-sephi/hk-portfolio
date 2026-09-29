@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="싸이월드의 미니룸과 기록 문화를 오늘의 웹으로 다시 만든 서비스 프로젝트.">
+  <meta name="theme-color" content="#454936">
+  <title>서비스 · AI Atelier</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="introduce.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top" class="page-service">
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header>
+    <a class="brand" href="article.html"><strong>AI</strong> <i>Atelier</i><small>HANKYUNG · LEARNING ARCHIVE</small></a>
+    <nav aria-label="주 메뉴">
+      <a href="introduce.html">Z-studio</a><a href="article.html">기사</a><a href="service.html" aria-current="page">서비스</a><a href="image.html">이미지</a><a href="video.html">영상</a><a href="final.html">Final project</a>
+    </nav>
+    <span class="edition">PORTFOLIO — 2026</span>
+  </header>
+  <aside class="music-player" aria-label="배경 음악">
+    <audio id="site-music" preload="metadata" autoplay loop><source src="assets/passacalle.mp3" type="audio/mpeg"></audio>
+    <button id="music-toggle" type="button" aria-pressed="false" title="배경 음악 재생 또는 정지"><span class="music-icon" aria-hidden="true">♪</span><span class="music-label"><small>BACKGROUND MUSIC</small><span class="music-state">음악 켜기</span></span></button>
+    <a class="music-credit" href="https://archive.org/details/Boccherini-Passacalle" target="_blank" rel="noopener noreferrer">Boccherini · Passa calle<br>cello1753 · CC BY-ND 3.0</a>
+  </aside>
+  <main id="main">
+    <section class="page-intro">
+      <div class="eyebrow">THE COLLECTION / 02</div>
+      <h1>A tiny world, <i>reborn.</i></h1>
+      <div class="intro-bottom"><h2>추억을 다시 여는 미니홈피</h2><p>싸이월드의 작은 방과 기록 문화를 오늘의 웹으로 다시 만든 서비스입니다.</p></div>
+    </section>
+    <section class="service-showcase">
+      <article class="service-story">
+        <span class="eyebrow">LIVE WEB SERVICE · 2026</span>
+        <h2>나만의 방에서<br><em>다시 만나는 추억.</em></h2>
+        <p>미니룸을 꾸미고, 다이어리에 하루를 남기고, 방명록으로 안부를 주고받던 시간을 웹 서비스로 구현했습니다. 옆의 휴대폰 화면에서 실제 서비스를 직접 둘러볼 수 있습니다.</p>
+        <dl class="service-facts">
+          <div><dt>EXPERIENCE</dt><dd>미니홈피 · 미니룸</dd></div>
+          <div><dt>FEATURES</dt><dd>다이어리 · 방명록 · BGM</dd></div>
+          <div><dt>MODE</dt><dd>방문자 미리보기 지원</dd></div>
+        </dl>
+        <a class="service-launch" href="https://cyworld-mini-homepage.vercel.app/" target="_blank" rel="noopener noreferrer">새 창에서 서비스 열기 <span>↗</span></a>
+      </article>
+      <div class="phone-stage">
+        <div class="phone" aria-label="싸이월드 미니홈피 서비스 휴대폰 미리보기">
+          <div class="phone-speaker" aria-hidden="true"></div>
+          <div class="phone-screen"><iframe src="https://cyworld-mini-homepage.vercel.app/" title="싸이월드 미니홈피 실제 서비스" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay"></iframe></div>
+          <div class="phone-home" aria-hidden="true"></div>
+        </div>
+        <p>화면을 스크롤하거나 메뉴를 눌러 직접 체험해 보세요.</p>
+      </div>
+    </section>
+    <section class="service-features">
+      <div class="section-heading"><h2>Inside the service <i>서비스 경험</i></h2><span>04 MOMENTS</span></div>
+      <div class="service-feature-grid">
+        <article><span>01</span><h3>미니룸</h3><p>가구와 캐릭터가 놓인 나만의 공간을 둘러봅니다.</p></article>
+        <article><span>02</span><h3>다이어리</h3><p>그날의 감정과 이야기를 차곡차곡 기록합니다.</p></article>
+        <article><span>03</span><h3>방명록</h3><p>방문한 친구와 짧은 안부를 주고받습니다.</p></article>
+        <article><span>04</span><h3>BGM &amp; 파도타기</h3><p>음악을 들으며 새로운 미니홈피로 이동합니다.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand" href="article.html">AI <i>Atelier</i></a><p>배우고, 실험하고, 나만의 시선으로 기록합니다.<br><small>한국경제 AI 교육 · 개인 학습 포트폴리오 / 예시 콘텐츠</small></p><a href="#top">맨 위로 ↑</a></footer>
+  <dialog id="viewer"><button class="close" aria-label="닫기">닫기 ×</button><div id="dialog-content"></div></dialog>
+</body>
+</html>
