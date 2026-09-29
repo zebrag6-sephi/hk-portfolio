@@ -1290,12 +1290,19 @@ dialog {
   font-weight: 500;
 }
 
-.article-chart figcaption span {
+.article-chart figcaption span,
+.article-chart .chart-source {
   color: var(--muted);
   font-size: 10px;
   letter-spacing: .04em;
   text-align: right;
 }
+
+.article-chart .chart-source {
+  border-bottom: 1px solid currentColor;
+}
+
+.article-chart .chart-source:hover { color: var(--blue); }
 
 @media (max-width: 1100px) {
   header { padding: 25px 0 17px; }
@@ -1341,7 +1348,8 @@ dialog {
   footer { margin-top: 40px; padding: 42px 5.5% 50px; }
   .article-chart { margin: 26px 0 30px; padding: 6px; border-radius: 16px 4px 16px 4px; }
   .article-chart figcaption { align-items: flex-start; flex-direction: column; gap: 5px; padding: 12px 8px 6px; }
-  .article-chart figcaption span { text-align: left; }
+  .article-chart figcaption span,
+  .article-chart .chart-source { text-align: left; }
 }
 
 @media (max-width: 420px) {
