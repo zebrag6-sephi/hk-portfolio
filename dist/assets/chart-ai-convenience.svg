@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">AI 활용 장면별 체감 편의성</title><desc id="desc">정보 정리 84, 초안 작성 71, 아이디어 확장 63, 반복 작업 58의 예시 막대그래프</desc>
+  <rect width="760" height="430" rx="24" fill="#f8f4e9"/><rect x="12" y="12" width="736" height="406" rx="17" fill="none" stroke="#c6b894"/>
+  <text x="52" y="62" fill="#303127" font-family="serif" font-size="28">AI 활용 장면별 체감 편의성</text><text x="52" y="89" fill="#9b7d49" font-family="sans-serif" font-size="12" letter-spacing="2">EDITORIAL NOTE · SAMPLE INDEX</text>
+  <g font-family="sans-serif" font-size="14" fill="#4c4d42">
+    <text x="52" y="148">정보 정리</text><text x="52" y="207">초안 작성</text><text x="52" y="266">아이디어 확장</text><text x="52" y="325">반복 작업</text>
+  </g>
+  <g fill="#e5decd"><rect x="170" y="125" width="500" height="27" rx="13"/><rect x="170" y="184" width="500" height="27" rx="13"/><rect x="170" y="243" width="500" height="27" rx="13"/><rect x="170" y="302" width="500" height="27" rx="13"/></g>
+  <g><rect x="170" y="125" width="420" height="27" rx="13" fill="#33438a"/><rect x="170" y="184" width="355" height="27" rx="13" fill="#444837"/><rect x="170" y="243" width="315" height="27" rx="13" fill="#8f774b"/><rect x="170" y="302" width="290" height="27" rx="13" fill="#70745d"/></g>
+  <g font-family="serif" font-size="18" font-weight="700"><text x="604" y="146" fill="#33438a">84</text><text x="539" y="205" fill="#444837">71</text><text x="499" y="264" fill="#8f774b">63</text><text x="474" y="323" fill="#70745d">58</text></g>
+  <path d="M52 365H708" stroke="#c6b894"/><text x="52" y="393" fill="#777568" font-family="sans-serif" font-size="12">수치가 높을수록 사용자가 느끼는 편의성이 큼</text>
+</svg>
